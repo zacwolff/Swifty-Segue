@@ -98,32 +98,9 @@ class ViewController: UITableViewController, UITableViewDelegate, UITableViewDat
         // Pass the selected object to the new view controller.
         
         println("Segue was initiated")
-        if (segue.identifier == "airtime")
+        if (segue.identifier == "detail")
         {
-            println("Airtime segue was initiated")
-            
-            let nvc = segue.destinationViewController as? UINavigationController
-            let nnvc = navigationController?.topViewController as? ViewController
-            nnvc?.navigationController?.navigationItem.title = "Gaa"
-            
-            
-            
-            /*
-            => Objective C Version
-            => Fetch Item
-            
-            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-            NSDictionary *item = [self.groceries objectAtIndex:[indexPath row]];
-            
-            
-            => Configure Detail View Controller
-            
-            TPDetailViewController *vc = [segue destinationViewController];
-            vc.navigationItem.title = [item objectForKey:@"name"];
-            [vc setItem:item];
-            */
+            println("Detail segue was initiated")
         }
-        
     }
 }
-
